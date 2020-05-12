@@ -10,7 +10,7 @@ in 2019 and 2020. Warmup rounds and restarts have been filtered, and for the
 remaining live rounds a round snapshot have been recorded every 20 seconds
 until the round is decided.
 
-[The dataset can be downloaded here](https://drive.google.com/drive/folders/1XcWtU8C9VvPKW2RrCp7ZSqkzleUmT5Mh).
+[The dataset can be downloaded here](https://drive.google.com/drive/folders/1XcWtU8C9VvPKW2RrCp7ZSqkzleUmT5Mh) (version 2, last updated 12-05-2021).
 
 ## Visualizer
 We have added a small python program that can visualize the round snapshots,
