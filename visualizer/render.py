@@ -25,7 +25,7 @@ def display_text(msg, pos):
 
 # Load one of the datasets
 if len(sys.argv) < 2:
-    print "Usage: render.py <path/to/dataset_xx.json>"
+    print("Usage: render.py <path/to/dataset_xx.json>")
     sys.exit(1)
 
 dataset = pd.read_json(sys.argv[1])
@@ -107,6 +107,17 @@ def render_player(player):
         screen, color, coord(pos['x'], pos['y']), 7
     )
 
+def render_smoke(smoke):
+    pos = smoke['position']
+    pygame.draw.circle(
+        screen, (127, 127, 127), coord(pos['x'], pos['y']), 20
+    )
+
+def render_molotov(molotov):
+    pos = molotov['position']
+    pygame.draw.circle(
+        screen, (255, 69, 0), coord(pos['x'], pos['y']), 20
+    )
 
 def render_bomb(pos):
     pygame.draw.rect(
@@ -115,6 +126,10 @@ def render_bomb(pos):
 
 
 def render_frame():
+    for molotov in round_snapshot['active_molotovs']:
+        render_molotov(molotov)
+    for smoke in round_snapshot['active_smokes']:
+        render_smoke(smoke)
     for player in round_snapshot['alive_players']:
         render_player(player)
     if round_snapshot['planted_bomb']:
