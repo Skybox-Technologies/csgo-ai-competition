@@ -10,7 +10,9 @@ in 2019 and 2020. Warmup rounds and restarts have been filtered, and for the
 remaining live rounds a round snapshot have been recorded every 20 seconds
 until the round is decided.
 
-[The dataset can be downloaded here](https://drive.google.com/drive/folders/1XcWtU8C9VvPKW2RrCp7ZSqkzleUmT5Mh) (version 2, last updated 12-05-2021).
+The second dataset has also been released, consisting of 200 recent demos.
+
+[The dataset can be downloaded here](https://drive.google.com/drive/folders/1XcWtU8C9VvPKW2RrCp7ZSqkzleUmT5Mh) (version 3, last updated 01-07-2020).
 
 ## Visualizer
 We have added a small python program that can visualize the round snapshots,
@@ -33,6 +35,10 @@ then please open an issue.
 ```Rust
 struct RoundSnapshot {
     map: String,                        // The map being played
+    map_crc: u32                        // CRC value for the map being played,
+                                        // which can be used to determine the
+                                        // exact version (with a bit of work)
+    patch_version: u32                  // Version of CS:GO the game was played on
     current_score: (u8, u8),            // Current round scores for (CT, T)
     round_status: RoundStatus,          // "FreezeTime", "Normal", "BombPlanted", "SlackTime"
     round_status_time_left: f32,        // How long to freezetime ends / round ends / bomb explodes

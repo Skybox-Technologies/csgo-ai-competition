@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3
+- Added map_crc and patch_version
+- Removed kills that occur during freezetime
+
 ## Version 2
 - Fixed current_score sometimes being wrong ([#1](/../../issues/1), thanks @russointroitoa)
 - Fixed tickrate heuristic making incorrect guesses for some corrupted demos, resulting in
