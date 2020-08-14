@@ -6,9 +6,9 @@ An example submission that always guesses that CTs win is provided in the `test-
 
 ## Location and deadline
 
-You can upload your submission here: TODO
+You can upload your submission here: https://ai.skybox.gg
 
-The deadline for uploading your submission is August 16th.
+The submission site will be open from now until August 21st.
 
 Please read the submission structure before submitting!
 
