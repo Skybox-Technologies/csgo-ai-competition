@@ -4,6 +4,8 @@ This repository contains documentation and some tools for the [CSGO.ai](https://
 By participating in the CSGO.ai challenge you agree to the terms and conditions
 of the challenge, which can be found in `terms.pdf`.
 
+Submission info can be found [here](/submission).
+
 ## Dataset
 The initial data set consists of ~500 demos from high level tournament play
 in 2019 and 2020. Warmup rounds and restarts have been filtered, and for the
