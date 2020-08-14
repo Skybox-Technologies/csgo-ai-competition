@@ -16,7 +16,9 @@ if [ ! -f "$SUBMISSION/run.sh" ]; then
     exit 1
 fi
 
-if [ ! -f "$SUBMISSION/README.md" -o -f "$SUBMISSION/README.txt" ]; then
+if [ -f "$SUBMISSION/README.md" -o -f "$SUBMISSION/README.txt" ]; then
+    true
+else
     echo "The README file is missing!"
     exit 1
 fi
